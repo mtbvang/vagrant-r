@@ -18,7 +18,7 @@ RUN touch /home/vagrant/.hushlogin
 # Enable passwordless sudo for vagrant
 RUN apt-get update && apt-get install -y sudo && apt-get clean
 RUN mkdir -p /etc/sudoers.d && echo "vagrant ALL= NOPASSWD: ALL" > /etc/sudoers.d/vagrant && chmod 0440 /etc/sudoers.d/vagrant
-RUN apt-get install -yq openssh-server wget curl
+RUN apt-get install -yq openssh-server wget
 
 ENV DEBIAN_FRONTEND newt
 
